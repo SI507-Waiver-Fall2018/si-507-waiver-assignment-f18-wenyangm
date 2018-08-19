@@ -21,7 +21,7 @@ for div in soup.find_all('div', class_ = 'view-most-read'):
             article_soup = BeautifulSoup(article_data, 'html.parser')
             for byline in article_soup.find_all('div', class_='byline'):
                 for link in byline.find_all('div', class_='link'):
-                    first_author = link.text.replace('and','r').split(',')[0].strip()
+                    first_author = link.text.replace('and',',').split(',')[0].strip()
                     most_reads.append( (title, first_author) )
 
 print('Michigan Daily -- MOST READ')
