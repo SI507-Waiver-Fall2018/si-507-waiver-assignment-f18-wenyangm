@@ -102,3 +102,6 @@ ENV/
 
 # vscode
 .vscode/
+
+# mac
+.DS_Store
